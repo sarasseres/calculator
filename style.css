@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+
+}
+
+
+.buttons {
+    display: flex;
+    margin-left: 10px;   
+}
+
+#input1,#input2,#input3 {
+    border: 1px solid black;
+    width: 250px;
+    margin: 20px;
+    height: 40px;
+    text-align: left;
+    padding: 5px;  
+}
+
+.check {
+    display: flex;
+    flex-direction: column;
+    margin: 5px 20px;
+}
+
+.cek {
+    margin: 25px;   
+}
+
+
+
+
+.symbols {
+    display: flex;
+      
+}
+
+
+button {
+    border: 1px solid  black;
+    width: 50px;
+    margin: 10px 10px;
+    border-radius: 5px;
+    text-align: center;
+    height: 30px;
+    padding: 5px;
+    background: transparent;
+    margin-left: 20px;
+}
+
+hr {
+    width: 25%;
+    margin: 20px;
+    
+}
+
+.result {
+    font-weight: 600;
+    margin: 20px;
+}

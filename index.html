@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <input class="" id="input1" for="box1" />
+      <input type="checkbox" id="box1" /><br />
+      <input class="" id="input2" for="box2" />
+      <input type="checkbox" id="box2" /><br />
+      <input class="" id="input3" for="box3" />
+      <input type="checkbox" id="box3" /><br />
+      <button onclick="kali()">x</button>
+      <button onclick="tambah()">+</button>
+      <button onclick="bagi()">/</button>
+      <button onclick="kurang()">-</button>
+      <hr />
+      <div class="result">
+        Hasil
+        <p id="hasil"></p>
+      </div>
+    </div>
+   
+    <script>
+      function kali() {
+        var box1 = document.getElementById("box1").checked;
+        var box2 = document.getElementById("box2").checked;
+        var box3 = document.getElementById("box3").checked;
+        var input1 = document.getElementById("input1").value;
+        var input2 = document.getElementById("input2").value;
+        var input3 = document.getElementById("input3").value;
+        var result = 0;
+
+        if (box1 && box2 == true) {
+          result = Number(input1) * Number(input2);
+          if (box3 == true) {
+            result *= Number(input3);
+            document.getElementById("hasil").innerHTML = result;
+          } else {
+            document.getElementById("hasil").innerHTML = result;
+          }
+        } else if (box2 && box3 == true) {
+          result = Number(input2) * Number(input3);
+          if (box3 == true) {
+            result *= Number(input3);
+            document.getElementById("hasil").innerHTML = result;
+          } else {
+            document.getElementById("hasil").innerHTML = result;
+          }
+        } else if (box1 && box3 == true) {
+          result = Number(input1) * Number(input3);
+          if (box3 == true) {
+            result *= Number(input3);
+            document.getElementById("hasil").innerHTML = result;
+          } else {
+            document.getElementById("hasil").innerHTML = result;
+          }
+        } else {
+          document.getElementById("hasil").innerHTML = "error";
+        }
+      }
+
+      function tambah() {
+        var box1 = document.getElementById("box1").checked;
+        var box2 = document.getElementById("box2").checked;
+        var box3 = document.getElementById("box3").checked;
+        var input1 = document.getElementById("input1").value;
+        var input2 = document.getElementById("input2").value;
+        var input3 = document.getElementById("input3").value;
+        var result = 0;
+
+        if (box1 && box2 == true) {
+          result = Number(input1) + Number(input2);
+          if (box3 == true) {
+            result += Number(input3);
+            document.getElementById("hasil").innerHTML = result;
+          } else {
+            document.getElementById("hasil").innerHTML = result;
+          }
+        } else if (box2 && box3 == true) {
+          result = Number(input2) + Number(input3);
+          if (box3 == true) {
+            result += Number(input3);
+            document.getElementById("hasil").innerHTML = result;
+          } else {
+            document.getElementById("hasil").innerHTML = result;
+          }
+        } else if (box1 && box3 == true) {
+          result = Number(input1) + Number(input3);
+          if (box3 == true) {
+            result += Number(input3);
+            document.getElementById("hasil").innerHTML = result;
+          } else {
+            document.getElementById("hasil").innerHTML = result;
+          }
+        } else {
+          document.getElementById("hasil").innerHTML = "error";
+        }
+      }
+
+      function bagi() {
+        var box1 = document.getElementById("box1").checked;
+        var box2 = document.getElementById("box2").checked;
+        var box3 = document.getElementById("box3").checked;
+        var input1 = document.getElementById("input1").value;
+        var input2 = document.getElementById("input2").value;
+        var input3 = document.getElementById("input3").value;
+        var result = 0;
+
+        if (box1 && box2 == true) {
+          result = Number(input1) / Number(input2);
+          if (box3 == true) {
+            result /= Number(input3);
+            document.getElementById("hasil").innerHTML = result;
+          } else {
+            document.getElementById("hasil").innerHTML = result;
+          }
+        } else if (box2 && box3 == true) {
+          result = Number(input2) / Number(input3);
+          if (box3 == true) {
+            result /= Number(input3);
+            document.getElementById("hasil").innerHTML = result;
+          } else {
+            document.getElementById("hasil").innerHTML = result;
+          }
+        } else if (box1 && box3 == true) {
+          result = Number(input1) / Number(input3);
+          if (box3 == true) {
+            result /= Number(input3);
+            document.getElementById("hasil").innerHTML = result;
+          } else {
+            document.getElementById("hasil").innerHTML = result;
+          }
+        } else {
+          document.getElementById("hasil").innerHTML = "error";
+        }
+      }
+
+      function kurang() {
+        var box1 = document.getElementById("box1").checked;
+        var box2 = document.getElementById("box2").checked;
+        var box3 = document.getElementById("box3").checked;
+        var input1 = document.getElementById("input1").value;
+        var input2 = document.getElementById("input2").value;
+        var input3 = document.getElementById("input3").value;
+        var result = 0;
+
+        if (box1 && box2 == true) {
+          result = Number(input1) - Number(input2);
+          if (box3 == true) {
+            result -= Number(input3);
+            document.getElementById("hasil").innerHTML = result;
+          } else {
+            document.getElementById("hasil").innerHTML = result;
+          }
+        } else if (box2 && box3 == true) {
+          result = Number(input2) - Number(input3);
+          if (box3 == true) {
+            result -= Number(input3);
+            document.getElementById("hasil").innerHTML = result;
+          } else {
+            document.getElementById("hasil").innerHTML = result;
+          }
+        } else if (box1 && box3 == true) {
+          result = Number(input1) - Number(input3);
+          if (box3 == true) {
+            result -= Number(input3);
+            document.getElementById("hasil").innerHTML = result;
+          } else {
+            document.getElementById("hasil").innerHTML = result;
+          }
+        } else {
+          document.getElementById("hasil").innerHTML = "error";
+        }
+      }
+    </script>
+  </body>
+</html>
